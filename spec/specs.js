@@ -1,25 +1,15 @@
-describe("leapYear", function(){
-  it("is false for a year that is not divisible by 4, 100, or 400", function(){
-    expect(leapYear(1993)).to.equal(false);
-  });
+describe("triangleType", function(){
 
-  it("is true for year divisible by 4", function(){
-    expect(leapYear(2004)).to.equal(true);
+  it("is not a triangle if the sum of 2 sides is less than or equal to the length of the third side", function(){
+    expect(triangleType([1, 2, 4])).to.equal("");
   });
-
-  it("is false for years divisible by 100", function(){
-    expect(leapYear(1900)).to.equal(false);
+  it("is equilateral if all sides are equal", function(){
+    expect(triangleType([2, 2, 2])).to.equal("equilateral");
   });
-
-  it("is true for years divisible by 400", function(){
-    expect(leapYear(2000)).to.equal(true);
+  it("is isosceles if two sides are equal", function(){
+    expect(triangleType([2, 2, 3])).to.equal("isosceles");
   });
-
-  it("is false if it is text", function(){
-    expect(leapYear("d")).to.equal(false);
-  });
-
-  it("is false if it is blank", function(){
-    expect(leapYear("")).to.equal(false);
+  it("is scalene if no sides are equal", function(){
+    expect(triangleType([13, 9, 14])).to.equal("scalene");
   });
 });
