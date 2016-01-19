@@ -4,9 +4,10 @@ var triangleType = function(triangle){
   var side2 = parseInt(triangle[1]);
   var side3 = parseInt(triangle[2]);
 
-  if ((side1 !== side2) && (side3 !== side2) && (side1 !== side3)){
+  if((triangle[0].length === 0) || (triangle[1].length === 0) || (triangle[2].length === 0) || isNaN(triangle[0]) || isNaN(triangle[1]) || isNaN(triangle[2]) ) {
+    return "";
+  } else if ((side1 !== side2) && (side3 !== side2) && (side1 !== side3)){
     if((side1 + side2 <= side3) || (side2 + side3 <= side1) || (side1 + side3 <= side2)){
-      console.log((side1 + side2 <= side3) )
       //not a triangle return blank string
       return "";
     }else {
@@ -17,7 +18,6 @@ var triangleType = function(triangle){
   } else if ((side1 === side2) || (side3 === side2) || (side1 === side3)) {
     return "isosceles";
   } else {
-    console.log("last false");
     return false;
   }
 };
