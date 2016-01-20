@@ -10,7 +10,7 @@ var triangleType = function(triangle){
     } else {
       return false;
     }
-  } else{
+  } else {
     return false;
   }
 }
@@ -26,7 +26,7 @@ function isTriangle(triangle){
 function isValidInput(triangle){
   if((triangle[0].length === 0) || (triangle[1].length === 0) || (triangle[2].length === 0) || isNaN(triangle[0]) || isNaN(triangle[1]) || isNaN(triangle[2]) ){
     return false;
-  } else{
+  } else {
     return true;
   }
 }
@@ -37,12 +37,10 @@ $(document).ready(function() {
     var result = triangleType(triangle);
     if(result){
       $(".triangle").text("a " +result);
-      
-    }else{
+    } else {
       $(".triangle").text("not a");
     }
     $("#result").show();
-    
     event.preventDefault();
   });
 });

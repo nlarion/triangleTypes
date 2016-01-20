@@ -1,5 +1,4 @@
 describe("triangleType", function(){
-
   it("is not a triangle if the sum of 2 sides is less than or equal to the length of the third side", function(){
     expect(triangleType([1, 2, 4])).to.equal(false);
   });
@@ -23,9 +22,7 @@ describe("triangleType", function(){
   it("is false if any side is not a integer", function(){
     expect(triangleType(["hh", 9, 14])).to.equal(false);
   });
-
 });
-
 
 describe("isTriangle", function(){
   it("is true if 3 inputs equals a triangle.", function(){
