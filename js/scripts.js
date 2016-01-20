@@ -36,9 +36,12 @@ $(document).ready(function() {
     var triangle =[$("input#side1").val(), $("input#side2").val(), $("input#side3").val() ]
     var result = triangleType(triangle);
     if(result){
-      $(".triangle").text(result);
-      $("#result").show();
+      $(".triangle").text("a " +result);
+      
+    }else{
+      $(".triangle").text("not a");
     }
+    $("#result").show();
     
     event.preventDefault();
   });
